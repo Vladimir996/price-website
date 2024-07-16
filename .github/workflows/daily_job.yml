@@ -2,7 +2,8 @@ name: Daily Price Update
 
 on:
   schedule:
-    - cron: '7 22 * * *'  # Pokreće se svaki dan u 22:07 po lokalnom vremenu u Beogradu (21:07 UTC)
+    - cron: '11 22 * * *'  # Pokreće se svaki dan u 22:07 po lokalnom vremenu u Beogradu (21:07 UTC)
+    - cron: '11 23 * * *'  # Pokreće se svaki dan u 22:07 po lokalnom vremenu u Beogradu (21:07 UTC)
 
 jobs:
   update_prices:
@@ -15,12 +16,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12.4'  # Zamijenite 'x' sa odgovarajućom verzijom Pythona
+          python-version: '3.12'  # Zamijenite sa odgovarajućom verzijom Pythona
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Ako imate dodatne biblioteke koje treba instalirati
+          pip install -r requirements.txt  # Instalacija potrebnih biblioteka
 
       - name: Run Python script
-        run: python main.py
+        run: python main.py  # Pokretanje Python skripte
