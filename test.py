@@ -1,5 +1,3 @@
-import schedule
-import time
 import asyncio
 import requests
 from bs4 import BeautifulSoup
@@ -31,8 +29,10 @@ async def get_price(url, price_id, name):
         print(f"Nepredviđena greška prilikom preuzimanja cene na {url}: {e}")
         return None
 
+
 async def send_message(bot, message):
     await bot.send_message(chat_id=CHAT_ID, text=message)
+
 
 async def main():
     bot = Bot(token=TOKEN)
@@ -57,12 +57,6 @@ async def main():
         else:
             print(f"Neispravni podaci u konfiguraciji: {item}")
 
-def run_daily():
-    schedule.every().day.at("14:00").do(asyncio.run, main())
 
 if __name__ == '__main__':
-    run_daily()
-    
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
+    asyncio.run(main())
