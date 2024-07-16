@@ -2,7 +2,7 @@ name: Daily Price Update
 
 on:
   schedule:
-    - cron: '0 22 07 * *'  # Pokreće se svaki dan u 14:00 UTC
+    - cron: '14 22 * * *'  # Pokreće se svaki dan u 14:00 UTC
 
 jobs:
   update_prices:
