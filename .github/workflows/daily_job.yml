@@ -2,7 +2,7 @@ name: Daily Price Update
 
 on:
   schedule:
-    - cron: '35 21 * * *'  # Pokreće se svaki dan u 22:07 po lokalnom vremenu u Beogradu (21:07 UTC)
+    - cron: '31 21 * * *'  # Pokreće se svaki dan u 22:07 po lokalnom vremenu u Beogradu (21:07 UTC)
 
 jobs:
   update_prices:
