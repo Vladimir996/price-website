@@ -4,9 +4,13 @@ from telegram import Bot
 import json
 import schedule
 import time
+import os
 
-TOKEN = '7415903848:AAEoQ5jVnhXxEQgp4RbAfBddGEM5tIA_Qpw'
-CHAT_ID = '6890676641'
+# TOKEN = '7415903848:AAEoQ5jVnhXxEQgp4RbAfBddGEM5tIA_Qpw'
+# CHAT_ID = '6890676641'
+
+TOKEN = os.environ.get('TOKEN')
+CHAT_ID = os.environ.get('CHAT_ID')
 
 # Asinhrona funkcija za preuzimanje trenutne cene sa web stranice
 async def get_price(url, price_id, name):
