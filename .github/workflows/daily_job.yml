@@ -2,7 +2,7 @@ name: Daily Price Update
 
 on:
   schedule:
-    - cron: '31 21 * * *'  # Pokreće se svaki dan u 22:07 po lokalnom vremenu u Beogradu (21:07 UTC)
+    - cron: '51 21 * * *'  # Pokreće se svaki dan u 22:07 po lokalnom vremenu u Beogradu (21:07 UTC)
 
 jobs:
   update_prices:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12'  # Zamijenite 'x' sa odgovarajućom verzijom Pythona
+          python-version: '3.12.4'  # Zamijenite 'x' sa odgovarajućom verzijom Pythona
 
       - name: Install dependencies
         run: |
