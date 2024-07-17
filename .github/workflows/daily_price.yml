@@ -2,11 +2,9 @@ name: Daily Bot
 
 on:
     schedule:
-        - cron: '59 21 * * *'
-        - cron: '59 22 * * *'
-        - cron: '59 00 * * *'
-        - cron: '59 23 * * *'
-        - cron: '59 01 * * *'
+        - cron: '15 14 * * *'
+        - cron: '30 14 * * *'
+
     push:
         branches:
             - main
