@@ -3,7 +3,6 @@ name: Daily Bot
 on:
     schedule:
         - cron: '15 14 * * *'
-        - cron: '30 14 * * *'
 
     push:
         branches:
